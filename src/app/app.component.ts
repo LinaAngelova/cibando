@@ -7,22 +7,13 @@ import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+
   title = 'cibando';
 
-images= [
-  {id: 1,
-    label: "Spaghetti al pomodoro"},
-
-    {id: 2,
-    label: "Tagliata di manzo"},
-
-    {id: 3,
-    label: "Tiramisù"}
-
-];
-
-percorso = "../assets/images/carousel-";
-
-
+evidenziato=false;
+onEvidenziazione(){
+this.evidenziato=!this.evidenziato;
 }
 
+}

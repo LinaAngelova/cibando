@@ -19,6 +19,7 @@ nav {
   padding: 16px;
 }
 
+
 html, body { height: 100%; }
 
 .carousel-caption {
@@ -34,6 +35,10 @@ text-shadow: black 2px 3px 3px;
   }
 }
 
+.testoEvidenziato{
+  background-color: yellow;
+  width:400px;
+}
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
