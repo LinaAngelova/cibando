@@ -19,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
     RecipesComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
