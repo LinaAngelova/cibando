@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'cibando';
 
 evidenziato=false;
+
 onEvidenziazione(){
 this.evidenziato=!this.evidenziato;
 }
