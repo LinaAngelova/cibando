@@ -1,8 +1,5 @@
-<app-header></app-header>
 <app-carousel></app-carousel>
- 
-<app-recipes></app-recipes>
- 
+
   <div id="main-container">
     <div class="container-titolo">
       <h2 [ngClass]="evidenziato ? 'testoEvidenziato' : ''" (click)="onEvidenziazione()" style='cursor:pointer'>Benvenuti in Cibando</h2>
@@ -12,7 +9,10 @@
         Inoltre è possibile riservare il nostro Privé per occasioni importanti o se si richiede privacy.
       </p>
     </div>
+    
+    
+    <app-recipes></app-recipes>
   </div>
 
+  
 
-  <app-footer></app-footer>
