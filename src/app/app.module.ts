@@ -22,6 +22,8 @@ import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component'
     HeaderComponent,
     FooterComponent,
     RecipeCardComponent,
+    
+ 
 
   ],
   imports: [
