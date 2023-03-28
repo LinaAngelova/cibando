@@ -1,0 +1,33 @@
+@import "../../../../styles/colors.scss";
+
+.ricette-image {
+    height: 200px;
+    width: 80%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.detail-title {
+    color: #8e210b;
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.detail-description {
+    padding: 20px;
+    font-family: "Monserrat" , sans-serif;
+    border: 2px solid;
+}
+
+.detail-difficulty {
+    color:#8e210b;
+    font-family: 'Monserrat', sans-serif;
+
+}
+
+
+
+

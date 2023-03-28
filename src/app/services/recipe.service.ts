@@ -15,4 +15,8 @@ getRecipes(): Observable<Recipe[]> {
 
 }
 
+getRecipe(id: number): Observable<Recipe> {
+  const recipe = RECIPES.find(ricetta => ricetta._id == id);
+  return of (recipe);
+  }
 }
