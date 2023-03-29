@@ -1,11 +1,17 @@
-
+<div *ngIf="ricetta">
 <img [src]= "ricetta.image" width="100%">
-
 <div id="main-container">
     <h2>{{ricetta.title}}</h2>
     <p>{{ricetta.description}}</p>
     <p>{{ricetta.date}}</p>
     <p>{{ricetta.difficulty}}</p>
+    <div class="row">
+    <strong>difficoltà:</strong>
+    <img [src]="percorsoStelline + ricetta.difficulty + '.png'" alt="" class="difficoltà">
+  </div>
+ </div>
 </div>
+<div *ngIf="!ricetta" id="ricetta_non_trovata">
+<h2>Spiacenti ma la ricetta richiesta non è più disponibile</h2>
 
-	
+</div>

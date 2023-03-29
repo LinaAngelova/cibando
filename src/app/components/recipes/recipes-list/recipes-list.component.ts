@@ -9,6 +9,7 @@ import { RecipeService } from 'src/app/services/recipe.service';
 })
 export class RecipesListComponent implements OnInit {
   ricette: Recipe[];
+  titoloRicetta:string;
   
   constructor(private recipeService: RecipeService){}
 
@@ -21,6 +22,11 @@ export class RecipesListComponent implements OnInit {
         console.log(error);
       }
     })
+  }
+
+  riceviMessaggio(e: any){
+    this.titoloRicetta == e ? this.titoloRicetta = '' : this.titoloRicetta = e;
+  
   }
 
 }
