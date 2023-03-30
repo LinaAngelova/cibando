@@ -12,6 +12,8 @@ export class DetailComponent implements OnInit {
   percorsoStelline = '../../../../assets/images/difficolta-';
   ricetta: Recipe;
 
+
+
   constructor (
   private activatedRoute: ActivatedRoute,
   private router: Router,
