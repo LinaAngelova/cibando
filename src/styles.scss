@@ -1,14 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap/dist/css/bootstrap.css";
 @import "./styles/colors.scss";
 
 body {
-  margin:0;
+  margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
-.bg-red, header {
+.bg-red, header{
   background-color: #8e210b!important;
 }
 
@@ -20,32 +19,66 @@ nav {
   padding: 16px;
 }
 
-
 html, body { height: 100%; }
 
-h2{
-  font-size:35px!important;
-  color: #8e210b !important;
+h2 {
+  font-size: 35px!important;
+  color: #8e210b!important;
   font-family: 'Homemade Apple', cursive!important;
 };
 
 .carousel-caption {
-  top: 27 rem;
+  top: 27rem;
   bottom: auto;
 
-  h3{
-
-font-family: "Homemade Apple", cursive;
-font-size: 40px;
-text-shadow: black 2px 3px 3px;
-
+  h3 {
+    font-family: "Homemade Apple", cursive;
+    font-size: 40px;
+    text-shadow: black 2px 3px 3px;
   }
 }
 
-.testoEvidenziato{
-  background-color: yellow;
-  width:400px;
+.btn-primary {
+  background-color: #8e210b!important;
+  font-weight: 700;
+  border: none!important;
 }
+
+.testoEvidenziato {
+  background-color: yellow;
+  width: 400px;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")!important;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+}
+
+.p-password{
+  width: 91%!important;
+  margin-left: 10px;
+
+  .p-inputtext {
+    float: right;
+    width: 100% !important;
+  }
+
+  .p-input-icon-right > i:last-of-type {
+    right: 2.5rem;
+  }
+}
+
+
+
+
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';

@@ -9,25 +9,31 @@ import { RecipeService } from 'src/app/services/recipe.service';
 })
 export class RecipesListComponent implements OnInit {
   ricette: Recipe[];
-  titoloRicetta:string;
-  
-  constructor(private recipeService: RecipeService){}
+  titoloRicetta: string;
 
-  ngOnInit(): void {
-    this.recipeService.getRecipes().subscribe({
-      next: (response) => {
-        this.ricette = response;
-      },
-      error: (error) => {
-        console.log(error);
-      }
-    })
-  }
+   constructor(private recipeService: RecipeService){}
 
-  riceviMessaggio(e: any){
+   ngOnInit(): void {
+     this.recipeService.getRecipes().subscribe({
+       next: (response) => {
+         this.ricette = response;
+       },
+       error: (error) => {
+         console.log(error);
+       }
+     })
+   }
+
+
+   riceviMessaggio(e: any){
+    if(this.titoloRicetta == e) {
+      this.titoloRicetta = ''
+    } else {
+      this.titoloRicetta = e
+    }
+
     this.titoloRicetta == e ? this.titoloRicetta = '' : this.titoloRicetta = e;
-  
-  }
+   }
 
-}
 
+ }

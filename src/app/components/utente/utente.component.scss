@@ -1,51 +1,68 @@
 .contenitore {
-    border-radius: 25px;
-    width: 85%;
+  border-radius: 25px;
+    width: 75%;
     margin: 20px auto;
-    border: 1px solid grey;
+    border: 2px solid #8e210b;
 
-.colonna-dx {
-background-image:url('https://lospicchiodaglio.it/img/news/sapete-cos-e-il-junk-food.jpg');    
-height: 400;
-background-size: cover;
-background-repeat: no-repeat;
-border-radius: 0px 25px 25px 0px;
+    input.ng-invalid.ng-touched {
+      border: 1px solid red;
+    }
+
+    input.ng-valid.ng-touched {
+      border: 1px solid rgb(77, 169, 80);
+    }
+
+    .colonna-dx {
+      background-image: url('https://www.lospicchiodaglio.it/img/news/sapete-cos-e-il-junk-food.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 0px 25px 25px 0px;
+    }
+
+    a {
+      color: #8e210b;
+      text-decoration: none;
   }
-
 }
 
 p.help.is-danger {
-    margin-top: -13px;
-    color: rgb(162, 18, 18);
-    font-size: 12px;
-    font-weight: 600;
+  margin-top: -13px;
+  color: rgb(191, 27, 27);
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 35px;
 }
 
-@media only screen and (min-witdth: 0px) and (max-width: 400px){
-
-.mx-1 {
-margin-right: 0rem!important;
-margin-left: 0rem!important;
-}  
-.me-3 {
- margin-right: 0rem!important;
-
- }
+.form-control {
+  float: right;
+  width: 91% !important;
 }
 
-input.ng-invalid.ng-touched { 
-    border: 1px solid red;
-
+.mat-icon {
+  position: relative;
+  top: 6px;
 }
 
-input.ng-valid.ng-touched { 
-        border: 1px solid green;  
-
+.form-label {
+  margin-left: 35px;
 }
-.btn.btn-primary {
+
+
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+  .mx-1 {
+      margin-right: 0rem !important;
+     margin-left: 0rem !important;
+}
+  .me-3 {
+    margin-right: 0rem !important;
+  }
+  .btn.btn-primary {
     background: #8e210b;
     border: 1px solid #8e210b;
-    margin-left: 0px;
-    margin-right: 0px;
+   margin-left: 0px;
     width: 100%;
+}
 }

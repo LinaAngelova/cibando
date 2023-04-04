@@ -16,7 +16,8 @@ import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component'
 import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { UtenteComponent } from './components/utente/utente.component';
-
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from 'primeng/divider';
 
 @NgModule({
   declarations: [
@@ -30,8 +31,6 @@ import { UtenteComponent } from './components/utente/utente.component';
     DetailComponent,
     RecipesListComponent,
     UtenteComponent,
-    
- 
 
   ],
   imports: [
@@ -42,6 +41,8 @@ import { UtenteComponent } from './components/utente/utente.component';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    PasswordModule,
+    DividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
