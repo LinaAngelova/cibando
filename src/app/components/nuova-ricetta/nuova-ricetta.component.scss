@@ -1,0 +1,39 @@
+.contenitore {
+    text-align: center!important;
+    width: 60%;
+    height: 60%;
+    margin-left: 1%;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: gray;
+    border-width:1px;
+}
+.card-title {
+    margin-bottom: 50px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #8e210b; 
+    margin-bottom: 0px;
+  }
+  .card-body {
+    text-align: center!important;
+    margin-left: 5px;
+    margin-right: 5px;
+
+  }
+  .font {
+    margin-top: 0px;
+    text-align: justify;
+    height: 180px!important
+  }
+
+  a.btn.btn-primary {
+    background: #8e210b;
+    border: none;
+    margin-top: 20px;
+    padding: 8px 35px;
+    margin-bottom: 10px;
+    
+}

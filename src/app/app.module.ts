@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { UtenteComponent } from './components/utente/utente.component';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
 import { PaginatorModule } from 'primeng/paginator';
+import { NuovaRicettaComponent } from './components/nuova-ricetta/nuova-ricetta.component';
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { PaginatorModule } from 'primeng/paginator';
     DetailComponent,
     RecipesListComponent,
     UtenteComponent,
+    NuovaRicettaComponent,
   
 
   ],
@@ -46,7 +49,8 @@ import { PaginatorModule } from 'primeng/paginator';
     ReactiveFormsModule,
     PasswordModule,
     DividerModule,
-    PaginatorModule
+    PaginatorModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
