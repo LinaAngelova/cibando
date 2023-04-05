@@ -4,7 +4,8 @@ import { CusomValidator } from './customValidator';
 import { UtenteService } from 'src/app/services/utente.service';
 import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
   selector: 'app-utente',
@@ -17,6 +18,7 @@ export class UtenteComponent implements OnInit {
     private utenteService: UtenteService,
     private router: Router,
     private config: PrimeNGConfig,
+    private  modalService: NgbModal,
   
   ){}
 
@@ -49,5 +51,19 @@ onSubmit(){
   this.router.navigate(['home']);
 
   }
+
+
+  open(content: any, titolo?: string){
+    let title = titolo;
+    this.modalService.open(content, {ariaLabelledBy: 'modale servizi', size: 'lg', centered: true}).result.then((res) => {
+      console.log('azione da eseguire')
+
+    }).catch((res) => {
+      console.log('nessuna azione da eseguire')
+
+    });
+  }
+
+
 
 }

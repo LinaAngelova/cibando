@@ -18,6 +18,8 @@ import { RecipesListComponent } from './components/recipes/recipes-list/recipes-
 import { UtenteComponent } from './components/utente/utente.component';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
+import { PaginatorModule } from 'primeng/paginator';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { DividerModule } from 'primeng/divider';
     DetailComponent,
     RecipesListComponent,
     UtenteComponent,
+  
 
   ],
   imports: [
@@ -43,6 +46,7 @@ import { DividerModule } from 'primeng/divider';
     ReactiveFormsModule,
     PasswordModule,
     DividerModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
