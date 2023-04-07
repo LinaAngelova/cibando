@@ -19,9 +19,15 @@ getRecipes(): Observable<Recipe[]> {
 
 }
 
-getRecipe(id: string): Observable<Recipe> {
+getRecipe(id: string) {
   // const recipe = RECIPES.find(ricetta => ricetta._id == id);
   // return of (recipe);
-  return this.http.get<Recipe>(`${this.apiBaseUrl}/${id}`)
+  return this.http.get<Recipe>(`${this.apiBaseUrl}/${id}`);
   }
-}
+
+  insertRecipe(recipe: any): Observable<any> {
+    return this.http.post<any>(`${this.apiBaseUrl}/`, recipe);
+  }
+  
+  }
+

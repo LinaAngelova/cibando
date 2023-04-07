@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output, OnDestroy } from '@angular/core';
 import { Recipe } from 'src/app/models/recipe.model';
 import { RecipeService } from 'src/app/services/recipe.service';
-import { take } from 'rxjs';
+import { Observable, take, map } from 'rxjs';
 
 @Component({
   selector: 'app-recipe-card',
@@ -13,9 +13,18 @@ export class RecipeCardComponent implements OnInit, OnDestroy{
 @Output() messaggio = new EventEmitter();
 
 recipes: Recipe[];
+
 ricetteTotali: number;
 page = 1;
 ricettePerPagina = 4;
+
+//esempio pipe asincrona
+// recipes$ = this.recipeService.getRecipes().pipe(
+//   map(res => this.ricette = res),
+// );
+
+// ricette: Recipe[];
+
 
 constructor(private recipeService: RecipeService,){}
 
@@ -26,12 +35,9 @@ ngOnInit(): void {
 ngOnDestroy(): void {
   console.log('utente uscito dal componente')
 }
+
 prendiRicette(){
-  this.recipeService.getRecipes()
-  .pipe(
-    take(1)
-  )
-  .subscribe({
+  this.recipeService.getRecipes().pipe(take(1)).subscribe({
     next: (res) => {
       this.recipes = res;
 

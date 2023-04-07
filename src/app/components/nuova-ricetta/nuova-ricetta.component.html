@@ -1,23 +1,51 @@
-*<div class="row contenitore" style="border-radius: 50px;">
-    <div class="col-xl-11 order-2 order-lg-3">
-    <img src="">
-    <div class="card-body">
-      <h5 class="card-title">Inserisci nuova ricetta</h5>
-      <p class="card-text"></p>
-     <div>
-<form>
-    <input placeholder="Nuova Ricetta" type="text" id="nuova ricetta" name="Nuova Ricetta" class="form-control" formControlName="nuova ricetta" />
-</form>
-      <a routerLink="inserisci" class="btn btn-primary">Inserisci</a>
-    </div>  
+<div class="main-contenainer" style="border-radius: 50px;">
+    <h1>inserisci una nuova ricetta</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()"></form>
+    <form>
+      <label for="title"Titolo></label>
+      <input type="text" name="title" class="form-control" formControlName="title">
 
-    <!-- <a class="btn btn-primary" routerLink="inserisci/{{recipe.title}}/{{recipe._id}}" *ngIf="!pag">Visualizza</a> -->
+      <label for="description">Descrizione</label>
+      <textarea name="description" rows="7" class="form-control" formControlName="descrizione">
+
+      </textarea>
+
+      <label for="image">foto</label>
+      <input type="text" name="image" class="form-control" formControlName="image">
+
+      <label for="difficulty">Difficoltà: </label>
+      <select name="difficulty" class="form-control" formControlName="difficulty">
+        <option value="">seleziona...</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+        
+      <label for="published">Pubblicare la ricetta</label>
+        <input type="checkbox" value="true" class="check" formControlName="published">
+
+    <button type="submit" class="btn btn-primary">Inserisci ricetta</button>
+    </form>
   </div>
- 
 
+<ng-template [ngIf]="ricettaInserita">
+  <div id="modale">
+    <div id="contenuto">
+      <h3>Ricetta inserita con successo</h3>
+      <img [src]="ricettaInserita.image">
+      <ul>
+        <li>{{ricettaInserita.title}}</li>
+        <li>{{ricettaInserita.description | slice: 0:200}}</li>
+        <li>{{ricettaInserita.difficulty}}</li>
+        <li>{{ricettaInserita.createdAt | date}}</li>
+        <li>{{ricettaInserita.publisced}}</li>
+      </ul>
+    </div>
+    <button class="btn" (click)="onClose()">Chiudi</button>
+    <button class="btn btn-primary" (click)="onNewRecipe()">Inserisci una nuova ricetta</button>
+  </div>
 
-  <!-- <div class="row contenitore" style="border-radius: 50px;">
-  <input placeholder="nominativo" type="text" id="nuova ricetta" name="Nuova Ricetta" class="form-control" formControlName="nuova ricetta" />
-  <label class="form-label" for="nuova ricetta">Inserisci nuova ricetta</label>
-  <button>Inserisci</button>
-</div>- -->
+</ng-template> 
+    

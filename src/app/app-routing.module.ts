@@ -13,10 +13,10 @@ const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'registrazione', component: UtenteComponent},
-  {path: 'nuova-ricetta', component: NuovaRicettaComponent},
   {path: 'ricette', component: RecipesComponent, children: [
     {path: 'dettaglio/:title/:_id', component: DetailComponent},
-    {path: '', pathMatch: 'full', component: RecipesListComponent}
+    {path: '', pathMatch: 'full', component: RecipesListComponent},
+    {path: 'nuova-ricetta', component: NuovaRicettaComponent},
   ]},
   {path: '**', redirectTo: 'home'},
 ];
